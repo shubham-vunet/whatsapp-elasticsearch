@@ -15,7 +15,7 @@ var WebSocketProxy = new Proxy(window.WebSocket, {
             data: {
               number: obj.id.split("@")[0],
               presence: obj.type,
-              date: "" + Date.now(),
+              "@timestamp": new Date(),
               name: "" + obj.id.split("@")[0],
               last: obj.t,
             },
