@@ -16,7 +16,7 @@ chrome.runtime.onConnect.addListener(function (port) {
       if (data && data.data) {
         sendPushNotification({
           ...data.data,
-          "@timestamp": new Date().getTime(),
+          "@timestamp": new Date(),
         });
       }
     });
