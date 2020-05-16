@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "background": { "page": "background.html" },
+  "content_scripts": [
+    {
+      "js": ["jquery-3.3.1.min.js", "pagescript.js"],
+      "matches": ["https://web.whatsapp.com/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Whatapp Web to Elastic Search",
+  "icons": {
+    "400": "logo.png"
+  },
+  "manifest_version": 2,
+  "name": "Whatapp Web to Elastic Search",
+  "permissions": ["*://*.whatsapp.com/*"],
+  "web_accessible_resources": ["*.js", "*.html"],
+  "content_security_policy": "script-src 'self' https://localhost:9200/;object-src 'self'"
+}
